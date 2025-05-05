@@ -1,0 +1,44 @@
+There is no board. When playing in person, players sit in a circle i a way that your neighbors are from a different team ignoring a neutral player. For example, if there are 7 players P1-P7, teams T1, T2 and N then they will be seated as follows going right along a circle: P1T1->P2T2->P3T1->P4N->P5T2->P6T1->P7T2->P1T1.
+
+The game is played in turns. Before the game begins each player is assigned a random character.
+Before the game begins each player gets five cards and the rest of the deck is put face down to draw from.
+Each turn a player first draws 2 cards from the face down deck. Then they can either play cards or discard cards. At the end of their turn the player can hold at most 5 cards. A player may end their turn at any time, even without playing a single card. Once one card is discarded no more cards can be played by that player.
+When a player attacks someone, the defender can play defense card out of turn. If the player is about to die then either they or one of their teammates can play a "sanjeevani" card to revive them.
+
+
+
+There are 6 types of action cards:
+Attack: deal damage to others. Per turn you are only allowed to attack once
+Some cards are single or dual target where you can choose the target(s)
+Some cards attack everyone except the caster including the casters allies
+Some cards bring the caster and the target to 2 hp
+Some cards can be stacked and used at the same time
+There are two kinds of attack cards - arrow and trident. This determines what kind of shield card can be used to block the attack. We'll come to that later
+Attack cards can deal 1 or 2 ho damage per target
+
+Defense: there are 2 defense cards
+Aina (Mirror) : that can defend against all kinds of attacks
+Jatayu (Shield) : only defend arrow attacks
+
+Health: heal yourself or others
+Sanjeevani (herbs) : heal 1 hp to a target. Can be used to revive a teammate out of turn only on their death
+Shabari (elixir): heals everyone
+
+Luck: draw additional cards
+Bramha: everyone  draws 1 card. players out of turn may end up holding more than 5 cards because of this.
+Vishnu: you draw 2 cards
+
+Power: special cards applied on the heroes 
+Laxman rekha (palisade) : provides a shield that blocks all attacks. Can only be broken by a trident type attack
+Vanvas (exile) : prevents the player in which it is applied from playing any cards on that turn but they still draw 2 cards. 
+
+Theft: steal cards
+Garuda: steal a card from any players face down hand or applied on their hero and discard it. Can be used to remove Laxman rekha on someone or vanvas applied to you or others
+Kaikeyi: exchange all your cards with someone. prior to playing kaikei player cannot discard cards
+Mareecha: steal a card from someone face down hand and put it in your hand
+Vimana: ask any player to give you a card of your choosing. If the player has the card in their hand they are bound to give to you
+
+
+Superpowers. Each character has a unique skill or superpower. Superpowers supersede action cards. Example Laxman (warrior)'s superpower allows the player to use a jatayu (shield) as a defence agains both arrow and trident attacks
+
+the game ends when all players of a team is eliminated
