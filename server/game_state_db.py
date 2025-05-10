@@ -46,12 +46,23 @@ class RoomState:
         return True
     
     def get_room_state(self, sid):
+        print(self.game_state.players)
         return_game_state = {
             "teams": self.teams,
+            "players": {
+                sid: {
+                    "name": player["name"],
+                    "health": player["health"],
+                    "applied_power_effects": player["applied_power_effects"],
+                    "team": player["team"],
+                }
+                for sid, player in self.game_state.players.items()
+            },
             "started": self.game_state.started,
             "current_player": self.players.get(self.game_state.current_player, None),
             "player_data": self.game_state.players.get(sid, None),
             "top_discard_pile": self.game_state.discard_pile,
+            "turn_order": self.game_state.turn_order,
         }
         print("Room state:", return_game_state)
         return return_game_state

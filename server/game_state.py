@@ -72,6 +72,7 @@ class GameState:
                 "health": MAX_HEALTH,
                 "applied_power_effects": [],
                 "cards": [],
+                "team": "team1" if player["sid"] in [p["sid"] for p in team1] else "team2" if player["sid"] in [p["sid"] for p in team2] else "neutral",
             }
             for player in team1 + team2 + neutral
         }
