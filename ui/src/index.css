@@ -1,7 +1,10 @@
 /* File: src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-    margin: 10px;
-    font-family: sans-serif;
-    background-color: #f2f2f2;
-  }
-  
+  margin: 10px;
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+}

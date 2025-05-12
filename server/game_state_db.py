@@ -69,7 +69,7 @@ class RoomState:
     
     def reset_room(self):
         self.players = {}
-        self.game_state = {}
+        self.game_state = GameState()
         self.teams = {
             "team1": [],
             "team2": [],
