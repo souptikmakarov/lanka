@@ -26,6 +26,7 @@ export class AppComponent {
   ngOnInit(): void {
     console.log('AppComponent initialized');
     this.socketService.connect();
+    this.socketService.onConnect();
     let playerIdSubscription = this.gameDataService.playerId.subscribe(
       (playerId: string | null) => {
         if (playerId) {
@@ -54,10 +55,6 @@ export class AppComponent {
         this.gameDataService.gameState.next(null);
         this.router.navigate(['/lobby']);
       });
-  }
-
-  sendMessage(): void {
-    this.socketService.emit('message', 'Hello from Angular!');
   }
 
   ngOnDestroy(): void {

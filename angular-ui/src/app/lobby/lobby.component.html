@@ -1,4 +1,3 @@
-<p>lobby works!</p>
 <div>
     <h2>Lobby</h2>
     <input placeholder="Enter your name" [value]="name" />
@@ -9,7 +8,7 @@
     </select>
     <button (click)="join()">Join Game</button>
     <p style="color: 'red'" *ngIf="error != ''">{{ error }}</p>
-    <div className="mt-4">
+    <div className="mt-4" *ngIf="game_state">
         <div *ngFor="let team of game_state.teams">
             <h3>team</h3>
             <ul>
