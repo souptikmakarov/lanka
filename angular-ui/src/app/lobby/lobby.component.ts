@@ -1,18 +1,27 @@
 import { Component } from '@angular/core';
 import { SocketService } from '../services/socket.service';
+import { CommonModule } from '@angular/common';
+import { GameDataService } from '../services/game-data.service';
 
 @Component({
   selector: 'app-lobby',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './lobby.component.html',
   styleUrl: './lobby.component.scss',
 })
 export class LobbyComponent {
-  private name: string = "";
-  private team: string = "";
-  private error: string = "";
+  public name: string = "";
+  public team: string = "";
+  public error: string = "";
+  public game_state: any = null;
 
-  constructor(private socket: SocketService) {}
+  constructor(private socket: SocketService, private gameDataService: GameDataService) {}
+
+  ngOnInit(): void {
+    this.gameDataService.gameState.subscribe((game_state: any) => {
+      this.game_state = game_state;
+    }); 
+  }
 
   public join() {
     this.socket.emit('join_game', { name: this.name, team: this.team });

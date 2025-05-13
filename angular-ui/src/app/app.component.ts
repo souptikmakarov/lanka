@@ -24,6 +24,7 @@ export class AppComponent {
   ) {}
 
   ngOnInit(): void {
+    console.log('AppComponent initialized');
     this.socketService.connect();
     let playerIdSubscription = this.gameDataService.playerId.subscribe(
       (playerId: string | null) => {
