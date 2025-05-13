@@ -1,1 +1,23 @@
 <p>lobby works!</p>
+<div>
+    <h2>Lobby</h2>
+    <input placeholder="Enter your name" [value]="name" />
+    <select [value]="team">
+        <option value="team1">Team 1</option>
+        <option value="team2">Team 2</option>
+        <option value="neutral">Neutral</option>
+    </select>
+    <button (click)="(join)">Join Game</button>
+    <p style="color: 'red'" *ngIf="error != ''">{{ error }}</p>
+    <div className="mt-4">
+        <div *ngFor="let team of game_state.teams">
+            <h3>team</h3>
+            <ul>
+                <li *ngFor="let player of game_state.teams[team]">
+                    {{ player["name"] || player["sid"] }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button className="mt-4" (click)="(startGame)">Start Game</button>
+</div>

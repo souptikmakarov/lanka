@@ -1,0 +1,27 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "command": "cd angular-ui && npm i",
+      "name": "UI"
+    },
+    {
+      "command": "cd server && pip install fastapi python-socketio uvicorn",
+      "name": "Server"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "UI": {
+      "name": "UI",
+      "command": "cd angular-ui && npm start",
+      "runAtStart": true
+    },
+    "Server": {
+      "name": "Server",
+      "command": "cd server && uvicorn main:app --reload",
+      "runAtStart": true
+    }
+  }
+}
